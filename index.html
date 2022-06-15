@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="suma-style.css" />
+    <link rel="stylesheet" href="aside-style.css" />
+    <link rel="stylesheet" href="visa-style.css" />
     <title>Trecia uzduotis</title>
   </head>
   <body>
@@ -72,9 +75,79 @@
           </div>
           <hr />
         </div>
+
+        <section>
+          <button type="button">
+            <img src="Arrow Down.png" class="button-arrow" />Continue Shopping
+          </button>
+          <div class="suma">
+            <div class="column">
+              <div class="suma-column">
+                <h2>Subtotal:</h2>
+                <h2>Shipping:</h2>
+              </div>
+              <div class="suma-column">
+                <p>$16.800</p>
+                <p><span>$150</span> $0</p>
+              </div>
+            </div>
+            <hr />
+            <div class="suma-row">
+              <h2>Total:</h2>
+              <p>$16.800</p>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <aside class="sidebar"></aside>
+      <aside class="sidebar">
+        <form method="get" action="#">
+          <h2 class="details">Card details</h2>
+          <h2 class="type">Card type</h2>
+          <div class="cards">
+            <div class="visa">
+              <img src="Visa_2014_logo_detail.png" />
+              <p class="visa-text">1234 5678 9876 5432</p>
+              <p class="mini-text">1234</p>
+              <div class="visa-bottom">
+                <p class="visa-text">Tung Tran</p>
+                <div class="visa-bottom-validation">
+                  <p class="valid">VALID <br />THRU</p>
+                  <p class="visa-text">03/20</p>
+                </div>
+              </div>
+            </div>
+            <div class="add__card">
+              <img src="Icon ionic-ios-add-circle-outline.png" />
+              <p>Add more cards</p>
+            </div>
+          </div>
+
+          <label for="name"> Name on card </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Lisa Tran"
+            required
+          />
+
+          <label for="number">Card number</label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="1234 5678 9876 3214"
+          />
+
+          <label for="date">Expiration date</label>
+          <input type="month" name="date" id="date" />
+
+          <div class="button-container">
+            <button type="submit">Check Out</button>
+          </div>
+        </form>
+      </aside>
     </main>
   </body>
 </html>
